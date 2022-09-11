@@ -41,7 +41,7 @@ const ModalQrCode = (props: any) => {
 			setQrCode(pix);
 		}
 		getPixQR()
-	}, [qrCodePix])
+	}, [])
 
 
 	return (
