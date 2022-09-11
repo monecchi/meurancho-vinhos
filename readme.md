@@ -1,3 +1,6 @@
+# Meu Rancho Vinhos
+
+´´´jsx
 <p align="center">
 	<img alt="Rice Bowl" src="public/images/icon-512.png" width="90">
 	<h2 align="center">Next PWA Template</h2>
@@ -14,6 +17,7 @@
 		<img alt="100% lighthouse scores" src="https://img.shields.io/badge/lighthouse-100%25-845EF7.svg?logo=lighthouse&logoColor=white&style=flat-square" />
 	</a>
 </p>
+```
 
 ## Features
 
