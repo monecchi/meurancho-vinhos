@@ -1,6 +1,6 @@
 # Meu Rancho Vinhos
 
-## Simple wine catalogue for a local store, no batabase
+## Simple wine catalogue for a local store, no database
 
 This is a work in progress!
 
