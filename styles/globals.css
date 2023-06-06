@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*
+    *
+    * This all are the rgb values which are used inside the
+    * tailwind config file and custom plugins css file
+    *
+    */
+
+    /*
+    * primary color
+    */
+    --color-accent: 0, 159, 127;
+
+    /*
+    * Hover state color of primary color
+    */
+    --color-accent-hover: 1, 147, 118;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-200: 204, 236, 229;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-300: 153, 217, 204;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-400: 77, 188, 165;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-500: 0, 159, 127;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-600: 0, 143, 114;
+
+    /*
+    * shade of primary color
+    */
+    --color-accent-700: 0, 119, 95;
+
+    /*
+    * light color
+    */
+    --color-light: 255, 255, 255;
+
+    /*
+    * dark color
+    */
+    --color-dark: 0, 0, 0;
+
+    /*
+    * Black muted color
+    */
+    --color-muted-black: 17, 17, 17;
+
+    /*
+    * Current color
+    */
+    --color-current: currentColor;
+
+    /*
+    *
+    * TEXT colors
+    *
+    */
+
+    /*
+    * text color used for body/base text -> gray-500
+    */
+    --text-base: 107, 114, 128;
+
+    /*
+    * dark base text color  -> gray-600
+    */
+    --text-base-dark: 75, 85, 99;
+
+    /*
+    * muted text color -> gray-400
+    */
+    --text-muted: 156, 163, 175;
+
+    /*
+    * light muted text color - gray-300
+    */
+    --text-muted-light: 209, 213, 219;
+
+    /*
+    * text color used for heading text -> gray-700
+    */
+    --text-sub-heading: 55, 65, 81;
+
+    /*
+    * text color used for heading text -> gray-800
+    */
+    --text-heading: 31, 41, 55;
+
+    /*
+    * text color used for heading text -> gray-900
+    */
+    --text-bolder: 31, 41, 55;
+
+    /*
+    *
+    * border colors
+    *
+    */
+
+    /*
+    * border color 50
+    */
+    --color-border-50: 249, 250, 251;
+
+    /*
+    * border color 100
+    */
+    --color-border-100: 243, 244, 246;
+
+    /*
+    * border color 200
+    */
+    --color-border-200: 229, 231, 235;
+
+    /*
+    * border base color which is 300
+    */
+    --color-border-base: 209, 213, 219;
+
+    /*
+    * border color 400
+    */
+    --color-border-400: 156, 163, 175;
+
+    /*
+    *
+    * Tailwind default gray color override
+    *
+    */
+
+    /*
+    * gray-50
+    */
+    --color-gray-50: 249, 250, 251;
+
+    /*
+    * gray-100
+    */
+    --color-gray-100: 243, 244, 246;
+
+    /*
+    * gray-200
+    */
+    --color-gray-200: 229, 231, 235;
+
+    /*
+    * gray-300
+    */
+    --color-gray-300: 209, 213, 219;
+
+    /*
+    * gray-400
+    */
+    --color-gray-400: 156, 163, 175;
+
+    /*
+    * gray-500
+    */
+    --color-gray-500: 107, 114, 128;
+
+    /*
+    * gray-600
+    */
+    --color-gray-600: 75, 85, 99;
+
+    /*
+    * gray-700
+    */
+    --color-gray-700: 55, 65, 81;
+
+    /*
+    * gray-800
+    */
+    --color-gray-800: 31, 41, 55;
+
+    /*
+    * gray-900
+    */
+    --color-gray-900: 31, 41, 55;
+
+    /*
+    * orange-50
+    */
+    --color-orange-50: 255, 247, 237;
+
+    /*
+    * orange-100
+    */
+    --color-orange-100: 255, 237, 213;
+
+    /*
+    * orange-200
+    */
+    --color-orange-200: 254, 215, 170;
+
+    /*
+    * orange-300
+    */
+    --color-orange-300: 253, 186, 116;
+
+    /*
+    * orange-400
+    */
+    --color-orange-400: 251, 146, 60;
+
+    /*
+    * orange-500
+    */
+    --color-orange-500: 249, 115, 22;
+
+    /*
+    * orange-600
+    */
+    --color-orange-600: 234, 88, 12;
+
+    /*
+    * orange-700
+    */
+    --color-orange-700: 194, 65, 12;
+
+    /*
+    * orange-800
+    */
+    --color-orange-800: 154, 52, 18;
+
+    /*
+    * orange-900
+    */
+    --color-orange-900: 124, 45, 18;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+		@apply min-h-screen select-none bg-neutral-50 text-zinc-900 antialiased p-safe dark:bg-zinc-900 dark:text-zinc-50;
+
+		/* PWA enhancements */
+		-webkit-overflow-scrolling: touch;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+  }
+
+	.svg__icon-stroke {
+		@apply stroke-zinc-900 dark:stroke-zinc-50;
+	}
+
+	.svg__icon-fill {
+		@apply fill-zinc-900 dark:fill-zinc-500;
+	}
+}
+
+.header-mobile {
+	height: 3.5rem;
+}
+
+.text-xxl {
+	font-size: 1.8rem;
+}
+
+/* react-modal */
+.Modal {
+	position: absolute;
+	inset: 20px;
+	background-color: #fff;
+	outline: none;
+}
+
+.Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+
+/* loading dots */
+.dot-falling {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f91942;
+  color: #f91942;
+  box-shadow: 9999px 0 0 0 #f91942;
+  animation: dot-falling 1s infinite linear;
+  animation-delay: 0.1s;
+}
+.dot-falling::before, .dot-falling::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-falling::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f91942;
+  color: #f91942;
+  animation: dot-falling-before 1s infinite linear;
+  animation-delay: 0s;
+}
+.dot-falling::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f91942;
+  color: #f91942;
+  animation: dot-falling-after 1s infinite linear;
+  animation-delay: 0.2s;
+}
+
+@keyframes dot-falling {
+  0% {
+    box-shadow: 9999px -15px 0 0 rgba(234, 29, 44, 0);
+  }
+  25%, 50%, 75% {
+    box-shadow: 9999px 0 0 0 #f91942;
+  }
+  100% {
+    box-shadow: 9999px 15px 0 0 rgba(234, 29, 44, 0);
+  }
+}
+@keyframes dot-falling-before {
+  0% {
+    box-shadow: 9984px -15px 0 0 rgba(234, 29, 44, 0);
+  }
+  25%, 50%, 75% {
+    box-shadow: 9984px 0 0 0 #f91942;
+  }
+  100% {
+    box-shadow: 9984px 15px 0 0 rgba(234, 29, 44, 0);
+  }
+}
+@keyframes dot-falling-after {
+  0% {
+    box-shadow: 10014px -15px 0 0 rgba(234, 29, 44, 0);
+  }
+  25%, 50%, 75% {
+    box-shadow: 10014px 0 0 0 #f91942;
+  }
+  100% {
+    box-shadow: 10014px 15px 0 0 rgba(234, 29, 44, 0);
+  }
+}
+
+/* wines technical details */
+
+.TechnicalDetails-description {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.TechnicalDetails-description .Left {
+  align-items: flex-start;
+  display: flex;
+}
+
+.TechnicalDetails-description .Right {
+  display: flex;
+  flex-direction: column;
+}
+
+.TechnicalDetails-description .Icon {
+  background-image: url(/images/icons-sprite.svg);
+  background-origin: content-box;
+  display: inline-block;
+  margin-right: 16px;
+  height: 40px;
+  width: 40px;
+}
+
+.TechnicalDetails-description .Icon.icon-light {
+  background-image: url(/images/icons-sprite-light.svg);
+  background-origin: content-box;
+  display: inline-block;
+  margin-right: 16px;
+  height: 40px;
+  width: 40px;
+}
+
+.TechnicalDetails dd {
+  color: #333;
+}
+
+.TechnicalDetails dd, .TechnicalDetails dt {
+  margin: 0;
+}
+
+.w-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.TechnicalDetails dt {
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.w-caption {
+  font-feature-settings: 'kern' off;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+/*
+
+grapes,
+location,
+winery,
+wineCup,
+ageing,
+harvest,
+classification,
+temperature,
+ageing_potential,
+tray
+
+*/
+.TechnicalDetails-description .Icon.Icon--grapes {
+  background-position: 0 0
+}
+
+.TechnicalDetails-description .Icon.Icon--location {
+  background-position: -40px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--winery {
+  background-position: -80px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--wine-and-cup {
+  background-position: -120px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--ageing {
+  background-position: -160px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--harvest {
+  background-position: -200px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--classification {
+  background-position: -240px 0
+}
+
+.TechnicalDetails-description .Icon.Icon--temperature {
+  background-position: -120px 40px
+}
+
+.TechnicalDetails-description .Icon.Icon--ageing_potential {
+  background-position: -160px 40px
+}
+
+.TechnicalDetails-description .Icon.Icon--tray {
+  background-position: -200px 40px
+}
